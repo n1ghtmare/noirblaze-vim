@@ -34,4 +34,4 @@ let s:p.tabline.right = copy(s:p.normal.right)
 let s:p.normal.error = [ [ s:accent0, s:shade0 ] ]
 let s:p.normal.warning = [ [ s:accent2, s:shade1 ] ]
 
-let g:lightline#colorscheme#hblaze#palette = lightline#colorscheme#fill(s:p)
+let g:lightline#colorscheme#noirblaze#palette = lightline#colorscheme#fill(s:p)
