@@ -17,3 +17,12 @@ Then in your config add:
 syntax enable
 colorscheme noirblaze
 ```
+
+You can also enable the lightline theme by including the following:
+
+```vim
+let g:lightline = { 'colorscheme': 'noirblaze' }
+```
+Here is some more screenshots:
+
+![2021-05-16_22-33](https://user-images.githubusercontent.com/3255810/118410169-ca480800-b696-11eb-90e5-5ad07c76da9a.png)
