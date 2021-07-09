@@ -7,6 +7,7 @@ let s:guishade4 = "#949494"
 let s:guishade5 = "#b4b4b4"
 let s:guishade6 = "#d5d5d5"
 let s:guishade7 = "#f5f5f5"
+let s:guishade8 = "#212121"
 let s:guiaccent0 = "#ff0088"
 let s:guiaccent1 = "#ff0088"
 let s:guiaccent2 = "#ffffff"
@@ -120,7 +121,7 @@ exec "hi Cursor guifg=".s:guishade0
 exec "hi Cursor ctermfg=".s:ctermshade0
 exec "hi CursorColumn guibg=".s:guishade1
 exec "hi CursorColumn ctermbg=".s:ctermshade1
-exec "hi CursorLine guibg=".s:guishade1
+exec "hi CursorLine guibg=".s:guishade8
 exec "hi CursorLine ctermbg=".s:ctermshade1." cterm=none"
 exec "hi Directory guifg=".s:guiaccent5
 exec "hi Directory ctermfg=".s:ctermaccent5
@@ -134,7 +135,7 @@ exec "hi DiffText guifg=".s:guiaccent2." guibg=".s:guishade2
 exec "hi DiffText ctermfg=".s:ctermaccent2." ctermbg=".s:ctermshade2
 exec "hi ErrorMsg guifg=".s:guishade7." guibg=".s:guiaccent0
 exec "hi ErrorMsg ctermfg=".s:ctermshade7." ctermbg=".s:ctermaccent0
-exec "hi VertSplit guifg=".s:guishade0." guibg=".s:guishade3
+exec "hi VertSplit guifg=".s:guishade0." guibg=".s:guishade8
 exec "hi VertSplit ctermfg=".s:ctermshade0." ctermbg=".s:ctermshade3
 exec "hi Folded guifg=".s:guishade4." guibg=".s:guishade1
 exec "hi Folded ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1
