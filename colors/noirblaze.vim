@@ -145,8 +145,8 @@ exec "hi SignColumn guibg=".s:guishade0
 exec "hi SignColumn ctermbg=".s:ctermshade0
 exec "hi IncSearch guifg=".s:guishade0." guibg=".s:guiaccent2
 exec "hi IncSearch ctermfg=".s:ctermshade0." ctermbg=".s:ctermaccent2
-exec "hi LineNr guifg=".s:guishade2." guibg=".s:guishade0
-exec "hi LineNr ctermfg=".s:ctermshade2." ctermbg=".s:ctermshade0
+exec "hi LineNr guifg=".s:guishade1." guibg=".s:guishade0
+exec "hi LineNr ctermfg=".s:ctermshade1." ctermbg=".s:ctermshade0
 exec "hi CursorLineNr guifg=".s:guishade3." guibg=".s:guishade1
 exec "hi CursorLineNr ctermfg=".s:ctermshade3." ctermbg=".s:ctermshade1
 exec "hi MatchParen guibg=".s:guishade2
