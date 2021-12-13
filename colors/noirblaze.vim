@@ -153,8 +153,8 @@ exec "hi MatchParen guibg=".s:guishade2
 exec "hi MatchParen ctermbg=".s:ctermshade2
 exec "hi MoreMsg guifg=".s:guishade0." guibg=".s:guiaccent4
 exec "hi MoreMsg ctermfg=".s:ctermshade0." ctermbg=".s:ctermaccent4
-exec "hi NonText guifg=".s:guishade2." guibg=".s:guishade0
-exec "hi NonText ctermfg=".s:ctermshade2." ctermbg=".s:ctermshade0
+exec "hi NonText guifg=".s:guishade1." guibg=".s:guishade0
+exec "hi NonText ctermfg=".s:ctermshade1." ctermbg=".s:ctermshade0
 exec "hi Pmenu guifg=".s:guishade6." guibg=".s:guishade1
 exec "hi Pmenu ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade1
 exec "hi PmenuSel guifg=".s:guiaccent4." guibg=".s:guishade1
