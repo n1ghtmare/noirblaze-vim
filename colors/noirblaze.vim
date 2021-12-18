@@ -1,14 +1,16 @@
+" TODO: Refactor and get better names for the colors
+
 " Assumes background=dark
-let s:guishade0 = "#121212"
-let s:guishade1 = "#323232"
-let s:guishade2 = "#535353"
-let s:guishade3 = "#737373"
-let s:guishade4 = "#949494"
-let s:guishade5 = "#b4b4b4"
-let s:guishade6 = "#d5d5d5"
-let s:guishade7 = "#f5f5f5"
-let s:guishade8 = "#212121"
-let s:guiaccent0 = "#ff0088"
+let s:guishade0 = "#121212" " gray_900 (background)
+let s:guishade1 = "#323232" " gray_800 (background highlights)
+let s:guishade2 = "#535353" " gray_700
+let s:guishade3 = "#737373" " gray_600
+let s:guishade4 = "#949494" " gray_500
+let s:guishade5 = "#b4b4b4" " gray_400
+let s:guishade6 = "#d5d5d5" " gray_300
+let s:guishade7 = "#f5f5f5" " gray_200
+let s:guishade8 = "#212121" " alt_gray_900
+let s:guiaccent0 = "#ff0088" " hot_pink
 let s:guiaccent1 = "#ff0088"
 let s:guiaccent2 = "#ffffff"
 let s:guiaccent3 = "#ff0088"
@@ -197,13 +199,19 @@ exec "hi WildMenu guifg=".s:guiaccent4." guibg=".s:guishade1
 exec "hi WildMenu ctermfg=".s:ctermaccent4." ctermbg=".s:ctermshade1
 
 " NERDTree
-
 exec "hi NERDTreeExecFile guifg=".s:guiaccent4
 exec "hi NERDTreeExecFile ctermfg=".s:ctermaccent4
 exec "hi NERDTreeDirSlash guifg=".s:guiaccent5
 exec "hi NERDTreeDirSlash ctermfg=".s:ctermaccent5
 exec "hi NERDTreeCWD guifg=".s:guiaccent0
 exec "hi NERDTreeCWD ctermfg=".s:ctermaccent0
+
+" nvim-tree
+exec "hi NvimTreeExecFile guifg=".s:guiaccent4
+exec "hi NvimTreeExecFile ctermfg=".s:ctermaccent4
+exec "hi NvimTreeFolderIcon guifg=".s:guishade7
+exec "hi NvimTreeIndentMarker guifg=".s:guiaccent4
+exec "hi NvimTreeRootFolder guifg=".s:guiaccent4
 
 """"""""""""
 " Clean up "
