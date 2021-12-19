@@ -192,11 +192,11 @@ exec "hi NvimTreeRootFolder guifg=".zinc_gray_500
 
 " nvim-treesitter
 exec "hi TSInclude guifg=".gray_600
-exec "hi TSKeyword guifg=".white
-exec "hi TSVariable guifg=".gray_400
+exec "hi TSKeyword guifg=".gray_500
+exec "hi TSVariable guifg=".white
 exec "hi TSPunctDelimiter guifg=".gray_600
 exec "hi TSPunctSpecial guifg=".hot_pink
-exec "hi TSPunctBracket guifg=".gray_400
+exec "hi TSPunctBracket guifg=".gray_300
 exec "hi TSTypeBuiltin guifg=".gray_600
 exec "hi TSTag guifg=".gray_600
 exec "hi TSTagDelimiter guifg=".gray_400
