@@ -1,221 +1,211 @@
-" TODO: Refactor and get better names for the colors
-
 " Assumes background=dark
-let s:guishade0 = "#121212" " gray_900 (background)
-let s:guishade1 = "#323232" " gray_800 (background highlights)
-let s:guishade2 = "#535353" " gray_700
-let s:guishade3 = "#737373" " gray_600
-let s:guishade4 = "#949494" " gray_500
-let s:guishade5 = "#b4b4b4" " gray_400
-let s:guishade6 = "#d5d5d5" " gray_300
-let s:guishade7 = "#f5f5f5" " gray_200
-let s:guishade8 = "#212121" " alt_gray_900
-let s:guiaccent0 = "#ff0088" " hot_pink
-let s:guiaccent1 = "#ff0088"
-let s:guiaccent2 = "#ffffff"
-let s:guiaccent3 = "#ff0088"
-let s:guiaccent4 = "#787878"
-let s:guiaccent5 = "#b0b0b0"
-let s:guiaccent6 = "#ff0088"
-let s:guiaccent7 = "#7a7a7a"
-let s:ctermshade0 = 233
-let s:ctermshade1 = 59
-let s:ctermshade2 = 239
-let s:ctermshade3 = 243
-let s:ctermshade4 = 246
-let s:ctermshade5 = 249
-let s:ctermshade6 = 252
-let s:ctermshade7 = 231
-let s:ctermaccent0 = 199
-let s:ctermaccent1 = 199
-let s:ctermaccent2 = 231
-let s:ctermaccent3 = 199
-let s:ctermaccent4 = 243
-let s:ctermaccent5 = 249
-let s:ctermaccent6 = 199
-let s:ctermaccent7 = 243
+let gray_900 = "#121212"
+let gray_800 = "#323232"
+let gray_700 = "#535353"
+let gray_600 = "#737373"
+let gray_500 = "#949494"
+let gray_400 = "#b4b4b4"
+let gray_300 = "#d5d5d5"
+let gray_200 = "#f5f5f5"
+
+let zinc_gray_900 = "#212121"
+let zinc_gray_600 = "#7a7a7a"
+let zinc_gray_500 = "#787878"
+let zinc_gray_200 = "#b0b0b0"
+
+let hot_pink = "#ff0088"
+let white = "#ffffff"
+
+let cterm_gray_900 = 233
+let cterm_gray_800 = 239
+let cterm_gray_700 = 243
+let cterm_gray_600 = 246
+let cterm_gray_500 = 249
+let cterm_gray_400 = 252
+
+let cterm_zinc_gray_900 = 59 " zinc_gray_900
+
+let cterm_hot_pink = 199
+let cterm_white = 231 " white
 
 highlight clear
 syntax reset
 let g:colors_name = "noirblaze"
 
-""""""""""
-" Normal "
-""""""""""
-
-exec "hi Normal guifg=".s:guishade6." guibg=".s:guishade0
-exec "hi Normal ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade0
-
-"""""""""""""""""
-" Syntax groups "
-"""""""""""""""""
+exec "hi Normal ctermfg=".cterm_gray_400." ctermbg=".cterm_gray_900
 
 " Default
-
-exec "hi Comment guifg=".s:guishade2
-exec "hi Comment ctermfg=".s:ctermshade2
-exec "hi Constant guifg=".s:guiaccent3
-exec "hi Constant ctermfg=".s:ctermaccent3
-exec "hi Character guifg=".s:guiaccent4
-exec "hi Character ctermfg=".s:ctermaccent4
-exec "hi Identifier guifg=".s:guiaccent2." gui=none"
-exec "hi Identifier ctermfg=".s:ctermaccent2." cterm=none"
-exec "hi Statement guifg=".s:guiaccent5
-exec "hi Statement ctermfg=".s:ctermaccent5
-exec "hi PreProc guifg=".s:guiaccent6
-exec "hi PreProc ctermfg=".s:ctermaccent6
-exec "hi Type guifg=".s:guiaccent7
-exec "hi Type ctermfg=".s:ctermaccent7
-exec "hi Special guifg=".s:guiaccent4
-exec "hi Special ctermfg=".s:ctermaccent4
-exec "hi Underlined guifg=".s:guiaccent5
-exec "hi Underlined ctermfg=".s:ctermaccent5
-exec "hi Error guifg=".s:guiaccent0." guibg=".s:guishade1
-exec "hi Error ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
-exec "hi Todo guifg=".s:guiaccent0." guibg=".s:guishade1
-exec "hi Todo ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
-exec "hi Function guifg=".s:guiaccent1
-exec "hi Function ctermfg=".s:ctermaccent1
+exec "hi Comment guifg=".gray_700
+exec "hi Comment ctermfg=".cterm_gray_800
+exec "hi Constant guifg=".hot_pink
+exec "hi Constant ctermfg=".cterm_hot_pink
+exec "hi Character guifg=".zinc_gray_500
+exec "hi Character ctermfg=".cterm_gray_700
+exec "hi Identifier guifg=".white." gui=none"
+exec "hi Identifier ctermfg=".cterm_white." cterm=none"
+exec "hi Statement guifg=".zinc_gray_200
+exec "hi Statement ctermfg=".cterm_gray_500
+exec "hi PreProc guifg=".hot_pink
+exec "hi PreProc ctermfg=".cterm_hot_pink
+exec "hi Type guifg=".zinc_gray_600
+exec "hi Type ctermfg=".cterm_gray_700
+exec "hi Special guifg=".zinc_gray_500
+exec "hi Special ctermfg=".cterm_gray_700
+exec "hi Underlined guifg=".zinc_gray_200
+exec "hi Underlined ctermfg=".cterm_gray_500
+exec "hi Error guifg=".hot_pink." guibg=".gray_800
+exec "hi Error ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi Todo guifg=".hot_pink." guibg=".gray_800
+exec "hi Todo ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi Function guifg=".hot_pink
+exec "hi Function ctermfg=".cterm_hot_pink
 
 " GitGutter
-
-exec "hi GitGutterAdd guifg=".s:guiaccent3
-exec "hi GitGutterAdd ctermfg=".s:ctermaccent3
-exec "hi GitGutterChange guifg=".s:guiaccent2
-exec "hi GitGutterChange ctermfg=".s:ctermaccent2
-exec "hi GitGutterChangeDelete guifg=".s:guiaccent2
-exec "hi GitGutterChangeDelete ctermfg=".s:ctermaccent2
-exec "hi GitGutterDelete guifg=".s:guiaccent0
-exec "hi GitGutterDelete ctermfg=".s:ctermaccent0
+exec "hi GitGutterAdd guifg=".hot_pink
+exec "hi GitGutterAdd ctermfg=".cterm_hot_pink
+exec "hi GitGutterChange guifg=".white
+exec "hi GitGutterChange ctermfg=".cterm_white
+exec "hi GitGutterChangeDelete guifg=".white
+exec "hi GitGutterChangeDelete ctermfg=".cterm_white
+exec "hi GitGutterDelete guifg=".hot_pink
+exec "hi GitGutterDelete ctermfg=".cterm_hot_pink
 
 " fugitive
-
-exec "hi gitcommitComment guifg=".s:guishade3
-exec "hi gitcommitComment ctermfg=".s:ctermshade3
-exec "hi gitcommitOnBranch guifg=".s:guishade3
-exec "hi gitcommitOnBranch ctermfg=".s:ctermshade3
-exec "hi gitcommitHeader guifg=".s:guishade5
-exec "hi gitcommitHeader ctermfg=".s:ctermshade5
-exec "hi gitcommitHead guifg=".s:guishade3
-exec "hi gitcommitHead ctermfg=".s:ctermshade3
-exec "hi gitcommitSelectedType guifg=".s:guiaccent3
-exec "hi gitcommitSelectedType ctermfg=".s:ctermaccent3
-exec "hi gitcommitSelectedFile guifg=".s:guiaccent3
-exec "hi gitcommitSelectedFile ctermfg=".s:ctermaccent3
-exec "hi gitcommitDiscardedType guifg=".s:guiaccent2
-exec "hi gitcommitDiscardedType ctermfg=".s:ctermaccent2
-exec "hi gitcommitDiscardedFile guifg=".s:guiaccent2
-exec "hi gitcommitDiscardedFile ctermfg=".s:ctermaccent2
-exec "hi gitcommitUntrackedFile guifg=".s:guiaccent0
-exec "hi gitcommitUntrackedFile ctermfg=".s:ctermaccent0
-
-"""""""""""""""""""""""
-" Highlighting Groups "
-"""""""""""""""""""""""
+exec "hi gitcommitComment guifg=".gray_600
+exec "hi gitcommitComment ctermfg=".cterm_gray_700
+exec "hi gitcommitOnBranch guifg=".gray_600
+exec "hi gitcommitOnBranch ctermfg=".cterm_gray_700
+exec "hi gitcommitHeader guifg=".gray_400
+exec "hi gitcommitHeader ctermfg=".cterm_gray_500
+exec "hi gitcommitHead guifg=".gray_600
+exec "hi gitcommitHead ctermfg=".cterm_gray_700
+exec "hi gitcommitSelectedType guifg=".hot_pink
+exec "hi gitcommitSelectedType ctermfg=".cterm_hot_pink
+exec "hi gitcommitSelectedFile guifg=".hot_pink
+exec "hi gitcommitSelectedFile ctermfg=".cterm_hot_pink
+exec "hi gitcommitDiscardedType guifg=".white
+exec "hi gitcommitDiscardedType ctermfg=".cterm_white
+exec "hi gitcommitDiscardedFile guifg=".white
+exec "hi gitcommitDiscardedFile ctermfg=".cterm_white
+exec "hi gitcommitUntrackedFile guifg=".hot_pink
+exec "hi gitcommitUntrackedFile ctermfg=".cterm_hot_pink
 
 " Default
 
-exec "hi ColorColumn guibg=".s:guishade1
-exec "hi ColorColumn ctermbg=".s:ctermshade1
-exec "hi Conceal guifg=".s:guishade2
-exec "hi Conceal ctermfg=".s:ctermshade2
-exec "hi Cursor guifg=".s:guishade0
-exec "hi Cursor ctermfg=".s:ctermshade0
-exec "hi CursorColumn guibg=".s:guishade1
-exec "hi CursorColumn ctermbg=".s:ctermshade1
-exec "hi CursorLine guibg=".s:guishade8
-exec "hi CursorLine ctermbg=".s:ctermshade1." cterm=none"
-exec "hi Directory guifg=".s:guiaccent5
-exec "hi Directory ctermfg=".s:ctermaccent5
-exec "hi DiffAdd guifg=".s:guiaccent3." guibg=".s:guishade1
-exec "hi DiffAdd ctermfg=".s:ctermaccent3." ctermbg=".s:ctermshade1
-exec "hi DiffChange guifg=".s:guiaccent2." guibg=".s:guishade1
-exec "hi DiffChange ctermfg=".s:ctermaccent2." ctermbg=".s:ctermshade1
-exec "hi DiffDelete guifg=".s:guiaccent0." guibg=".s:guishade1
-exec "hi DiffDelete ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
-exec "hi DiffText guifg=".s:guiaccent2." guibg=".s:guishade2
-exec "hi DiffText ctermfg=".s:ctermaccent2." ctermbg=".s:ctermshade2
-exec "hi ErrorMsg guifg=".s:guishade7." guibg=".s:guiaccent0
-exec "hi ErrorMsg ctermfg=".s:ctermshade7." ctermbg=".s:ctermaccent0
-exec "hi VertSplit guifg=".s:guishade0." guibg=".s:guishade8
-exec "hi VertSplit ctermfg=".s:ctermshade0." ctermbg=".s:ctermshade3
-exec "hi Folded guifg=".s:guishade4." guibg=".s:guishade1
-exec "hi Folded ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1
-exec "hi FoldColumn guifg=".s:guishade4." guibg=".s:guishade1
-exec "hi FoldColumn ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1
-exec "hi SignColumn guibg=".s:guishade0
-exec "hi SignColumn ctermbg=".s:ctermshade0
-exec "hi IncSearch guifg=".s:guishade0." guibg=".s:guiaccent2
-exec "hi IncSearch ctermfg=".s:ctermshade0." ctermbg=".s:ctermaccent2
-exec "hi LineNr guifg=".s:guishade1." guibg=".s:guishade0
-exec "hi LineNr ctermfg=".s:ctermshade1." ctermbg=".s:ctermshade0
-exec "hi CursorLineNr guifg=".s:guishade3." guibg=".s:guishade1
-exec "hi CursorLineNr ctermfg=".s:ctermshade3." ctermbg=".s:ctermshade1
-exec "hi MatchParen guibg=".s:guishade2
-exec "hi MatchParen ctermbg=".s:ctermshade2
-exec "hi MoreMsg guifg=".s:guishade0." guibg=".s:guiaccent4
-exec "hi MoreMsg ctermfg=".s:ctermshade0." ctermbg=".s:ctermaccent4
-exec "hi NonText guifg=".s:guishade1." guibg=".s:guishade0
-exec "hi NonText ctermfg=".s:ctermshade1." ctermbg=".s:ctermshade0
-exec "hi Pmenu guifg=".s:guishade6." guibg=".s:guishade1
-exec "hi Pmenu ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade1
-exec "hi PmenuSel guifg=".s:guiaccent4." guibg=".s:guishade1
-exec "hi PmenuSel ctermfg=".s:ctermaccent4." ctermbg=".s:ctermshade1
-exec "hi PmenuSbar guifg=".s:guiaccent3." guibg=".s:guishade1
-exec "hi PmenuSbar ctermfg=".s:ctermaccent3." ctermbg=".s:ctermshade1
-exec "hi PmenuThumb guifg=".s:guiaccent0." guibg=".s:guishade2
-exec "hi PmenuThumb ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade2
-exec "hi Question guifg=".s:guishade7." guibg=".s:guishade1
-exec "hi Question ctermfg=".s:ctermshade7." ctermbg=".s:ctermshade1
-exec "hi Search guifg=".s:guishade0." guibg=".s:guiaccent2
-exec "hi Search ctermfg=".s:ctermshade0." ctermbg=".s:ctermaccent2
-exec "hi SpecialKey guifg=".s:guiaccent7." guibg=".s:guishade0
-exec "hi SpecialKey ctermfg=".s:ctermaccent7." ctermbg=".s:ctermshade0
-exec "hi SpellBad guifg=".s:guiaccent0
-exec "hi SpellBad ctermfg=".s:ctermaccent0." ctermbg=NONE cterm=undercurl"
-exec "hi SpellCap guifg=".s:guiaccent2
-exec "hi SpellCap ctermfg=".s:ctermaccent2." ctermbg=NONE cterm=undercurl"
-exec "hi SpellLocal guifg=".s:guiaccent4
-exec "hi SpellLocal ctermfg=".s:ctermaccent4
-exec "hi SpellRare guifg=".s:guiaccent1
-exec "hi SpellRare ctermfg=".s:ctermaccent1
-exec "hi StatusLine guifg=".s:guishade4." guibg=".s:guishade1." gui=none"
-exec "hi StatusLine ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1." cterm=none"
-exec "hi TabLine guifg=".s:guishade5." guibg=".s:guishade1
-exec "hi TabLine ctermfg=".s:ctermshade5." ctermbg=".s:ctermshade1
-exec "hi TabLineFill guibg=".s:guishade1
-exec "hi TabLineFill ctermbg=".s:ctermshade1
-exec "hi TabLineSel guifg=".s:guishade6." guibg=".s:guishade0
-exec "hi TabLineSel ctermfg=".s:ctermshade6." ctermbg=".s:ctermshade0
-exec "hi Title guifg=".s:guiaccent5
-exec "hi Title ctermfg=".s:ctermaccent5
-exec "hi Visual guibg=".s:guishade1
-exec "hi Visual ctermbg=".s:ctermshade1
-exec "hi VisualNOS guifg=".s:guiaccent0." guibg=".s:guishade1
-exec "hi VisualNOS ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
-exec "hi WarningMsg guifg=".s:guiaccent0
-exec "hi WarningMsg ctermfg=".s:ctermaccent0
-exec "hi WildMenu guifg=".s:guiaccent4." guibg=".s:guishade1
-exec "hi WildMenu ctermfg=".s:ctermaccent4." ctermbg=".s:ctermshade1
+exec "hi ColorColumn guibg=".gray_800
+exec "hi ColorColumn ctermbg=".cterm_zinc_gray_900
+exec "hi Conceal guifg=".gray_700
+exec "hi Conceal ctermfg=".cterm_gray_800
+exec "hi Cursor guifg=".gray_900
+exec "hi Cursor ctermfg=".cterm_gray_900
+exec "hi CursorColumn guibg=".gray_800
+exec "hi CursorColumn ctermbg=".cterm_zinc_gray_900
+exec "hi CursorLine guibg=".zinc_gray_900
+exec "hi CursorLine ctermbg=".cterm_zinc_gray_900." cterm=none"
+exec "hi Directory guifg=".zinc_gray_200
+exec "hi Directory ctermfg=".cterm_gray_500
+exec "hi DiffAdd guifg=".hot_pink." guibg=".gray_800
+exec "hi DiffAdd ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi DiffChange guifg=".white." guibg=".gray_800
+exec "hi DiffChange ctermfg=".cterm_white." ctermbg=".cterm_zinc_gray_900
+exec "hi DiffDelete guifg=".hot_pink." guibg=".gray_800
+exec "hi DiffDelete ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi DiffText guifg=".white." guibg=".gray_700
+exec "hi DiffText ctermfg=".cterm_white." ctermbg=".cterm_gray_800
+exec "hi ErrorMsg guifg=".gray_200." guibg=".hot_pink
+exec "hi ErrorMsg ctermfg=".cterm_white." ctermbg=".cterm_hot_pink
+exec "hi VertSplit guifg=".gray_900." guibg=".zinc_gray_900
+exec "hi VertSplit ctermfg=".cterm_gray_900." ctermbg=".cterm_gray_700
+exec "hi Folded guifg=".gray_500." guibg=".gray_800
+exec "hi Folded ctermfg=".cterm_gray_600." ctermbg=".cterm_zinc_gray_900
+exec "hi FoldColumn guifg=".gray_500." guibg=".gray_800
+exec "hi FoldColumn ctermfg=".cterm_gray_600." ctermbg=".cterm_zinc_gray_900
+exec "hi SignColumn guibg=".gray_900
+exec "hi SignColumn ctermbg=".cterm_gray_900
+exec "hi IncSearch guifg=".gray_900." guibg=".white
+exec "hi IncSearch ctermfg=".cterm_gray_900." ctermbg=".cterm_white
+exec "hi LineNr guifg=".gray_800." guibg=".gray_900
+exec "hi LineNr ctermfg=".cterm_zinc_gray_900." ctermbg=".cterm_gray_900
+exec "hi CursorLineNr guifg=".gray_600." guibg=".gray_800
+exec "hi CursorLineNr ctermfg=".cterm_gray_700." ctermbg=".cterm_zinc_gray_900
+exec "hi MatchParen guibg=".gray_700
+exec "hi MatchParen ctermbg=".cterm_gray_800
+exec "hi MoreMsg guifg=".gray_900." guibg=".zinc_gray_500
+exec "hi MoreMsg ctermfg=".cterm_gray_900." ctermbg=".cterm_gray_700
+exec "hi NonText guifg=".gray_800." guibg=".gray_900
+exec "hi NonText ctermfg=".cterm_zinc_gray_900." ctermbg=".cterm_gray_900
+exec "hi Pmenu guifg=".gray_300." guibg=".gray_800
+exec "hi Pmenu ctermfg=".cterm_gray_400." ctermbg=".cterm_zinc_gray_900
+exec "hi PmenuSel guifg=".zinc_gray_500." guibg=".gray_800
+exec "hi PmenuSel ctermfg=".cterm_gray_700." ctermbg=".cterm_zinc_gray_900
+exec "hi PmenuSbar guifg=".hot_pink." guibg=".gray_800
+exec "hi PmenuSbar ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi PmenuThumb guifg=".hot_pink." guibg=".gray_700
+exec "hi PmenuThumb ctermfg=".cterm_hot_pink." ctermbg=".cterm_gray_800
+exec "hi Question guifg=".gray_200." guibg=".gray_800
+exec "hi Question ctermfg=".cterm_white." ctermbg=".cterm_zinc_gray_900
+exec "hi Search guifg=".gray_900." guibg=".white
+exec "hi Search ctermfg=".cterm_gray_900." ctermbg=".cterm_white
+exec "hi SpecialKey guifg=".zinc_gray_600." guibg=".gray_900
+exec "hi SpecialKey ctermfg=".cterm_gray_700." ctermbg=".cterm_gray_900
+exec "hi SpellBad guifg=".hot_pink
+exec "hi SpellBad ctermfg=".cterm_hot_pink." ctermbg=NONE cterm=undercurl"
+exec "hi SpellCap guifg=".white
+exec "hi SpellCap ctermfg=".cterm_white." ctermbg=NONE cterm=undercurl"
+exec "hi SpellLocal guifg=".zinc_gray_500
+exec "hi SpellLocal ctermfg=".cterm_gray_700
+exec "hi SpellRare guifg=".hot_pink
+exec "hi SpellRare ctermfg=".cterm_hot_pink
+exec "hi StatusLine guifg=".gray_500." guibg=".gray_800." gui=none"
+exec "hi StatusLine ctermfg=".cterm_gray_600." ctermbg=".cterm_zinc_gray_900." cterm=none"
+exec "hi TabLine guifg=".gray_400." guibg=".gray_800
+exec "hi TabLine ctermfg=".cterm_gray_500." ctermbg=".cterm_zinc_gray_900
+exec "hi TabLineFill guibg=".gray_800
+exec "hi TabLineFill ctermbg=".cterm_zinc_gray_900
+exec "hi TabLineSel guifg=".gray_300." guibg=".gray_900
+exec "hi TabLineSel ctermfg=".cterm_gray_400." ctermbg=".cterm_gray_900
+exec "hi Title guifg=".zinc_gray_200
+exec "hi Title ctermfg=".cterm_gray_500
+exec "hi Visual guibg=".gray_800
+exec "hi Visual ctermbg=".cterm_zinc_gray_900
+exec "hi VisualNOS guifg=".hot_pink." guibg=".gray_800
+exec "hi VisualNOS ctermfg=".cterm_hot_pink." ctermbg=".cterm_zinc_gray_900
+exec "hi WarningMsg guifg=".hot_pink
+exec "hi WarningMsg ctermfg=".cterm_hot_pink
+exec "hi WildMenu guifg=".zinc_gray_500." guibg=".gray_800
+exec "hi WildMenu ctermfg=".cterm_gray_700." ctermbg=".cterm_zinc_gray_900
 
 " NERDTree
-exec "hi NERDTreeExecFile guifg=".s:guiaccent4
-exec "hi NERDTreeExecFile ctermfg=".s:ctermaccent4
-exec "hi NERDTreeDirSlash guifg=".s:guiaccent5
-exec "hi NERDTreeDirSlash ctermfg=".s:ctermaccent5
-exec "hi NERDTreeCWD guifg=".s:guiaccent0
-exec "hi NERDTreeCWD ctermfg=".s:ctermaccent0
+exec "hi NERDTreeExecFile guifg=".zinc_gray_500
+exec "hi NERDTreeExecFile ctermfg=".cterm_gray_700
+exec "hi NERDTreeDirSlash guifg=".zinc_gray_200
+exec "hi NERDTreeDirSlash ctermfg=".cterm_gray_500
+exec "hi NERDTreeCWD guifg=".hot_pink
+exec "hi NERDTreeCWD ctermfg=".cterm_hot_pink
 
 " nvim-tree
-exec "hi NvimTreeExecFile guifg=".s:guiaccent4
-exec "hi NvimTreeExecFile ctermfg=".s:ctermaccent4
-exec "hi NvimTreeFolderIcon guifg=".s:guishade7
-exec "hi NvimTreeIndentMarker guifg=".s:guiaccent4
-exec "hi NvimTreeRootFolder guifg=".s:guiaccent4
+exec "hi NvimTreeExecFile guifg=".zinc_gray_500
+exec "hi NvimTreeExecFile ctermfg=".cterm_gray_700
+exec "hi NvimTreeFolderIcon guifg=".gray_200
+exec "hi NvimTreeIndentMarker guifg=".zinc_gray_500
+exec "hi NvimTreeRootFolder guifg=".zinc_gray_500
 
-""""""""""""
-" Clean up "
-""""""""""""
+" nvim-treesitter
+exec "hi TSInclude guifg=".gray_600
+exec "hi TSKeyword guifg=".white
+exec "hi TSVariable guifg=".gray_400
+exec "hi TSPunctDelimiter guifg=".gray_600
+exec "hi TSPunctSpecial guifg=".hot_pink
+exec "hi TSPunctBracket guifg=".gray_400
+exec "hi TSTypeBuiltin guifg=".gray_600
+exec "hi TSTag guifg=".gray_600
+exec "hi TSTagDelimiter guifg=".gray_400
+exec "hi TSConstructor guifg=".gray_200
+exec "hi TSProperty guifg=".gray_300
+exec "hi TSMethod guifg=".gray_200
+exec "hi TSKeywordReturn guifg=".white
+exec "hi TSKeywordFunction guifg=".gray_500
 
-unlet s:guishade0 s:guishade1 s:guishade2 s:guishade3 s:guishade4 s:guishade5 s:guishade6 s:guishade7 s:guiaccent0 s:guiaccent1 s:guiaccent2 s:guiaccent3 s:guiaccent4 s:guiaccent5 s:guiaccent6 s:guiaccent7
-unlet s:ctermshade0 s:ctermshade1 s:ctermshade2 s:ctermshade3 s:ctermshade4 s:ctermshade5 s:ctermshade6 s:ctermshade7 s:ctermaccent0 s:ctermaccent1 s:ctermaccent2 s:ctermaccent3 s:ctermaccent4 s:ctermaccent5 s:ctermaccent6 s:ctermaccent7
+" Clean up
+unlet gray_900 gray_800 gray_700 gray_600 gray_500 gray_400 gray_300 gray_200 hot_pink white zinc_gray_500 zinc_gray_200 zinc_gray_600
+unlet cterm_gray_900 cterm_zinc_gray_900 cterm_gray_800 cterm_gray_700 cterm_gray_600 cterm_gray_500 cterm_gray_400 cterm_white cterm_hot_pink
