@@ -193,18 +193,21 @@ exec "hi NvimTreeRootFolder guifg=".zinc_gray_500
 " nvim-treesitter
 exec "hi TSInclude guifg=".gray_600
 exec "hi TSKeyword guifg=".gray_500
-exec "hi TSVariable guifg=".white
+exec "hi TSVariable guifg=".gray_300
 exec "hi TSPunctDelimiter guifg=".gray_600
 exec "hi TSPunctSpecial guifg=".hot_pink
-exec "hi TSPunctBracket guifg=".gray_300
+"exec "hi TSPunctBracket guifg=".gray_600
 exec "hi TSTypeBuiltin guifg=".gray_600
 exec "hi TSTag guifg=".gray_600
-exec "hi TSTagDelimiter guifg=".gray_400
+"exec "hi TSTagDelimiter guifg=".gray_400
 exec "hi TSConstructor guifg=".gray_200
 exec "hi TSProperty guifg=".gray_300
 exec "hi TSMethod guifg=".gray_200
 exec "hi TSKeywordReturn guifg=".white
 exec "hi TSKeywordFunction guifg=".gray_500
+exec "hi TSFunction guifg=".white
+exec "hi TSNone guifg=".gray_400
+"exec "hi TSType guifg=".gray_400
 
 " Clean up
 unlet gray_900 gray_800 gray_700 gray_600 gray_500 gray_400 gray_300 gray_200 hot_pink white zinc_gray_500 zinc_gray_200 zinc_gray_600
