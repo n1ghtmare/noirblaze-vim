@@ -25,7 +25,7 @@ let cterm_gray_400 = 252
 
 let cterm_zinc_gray_900 = 59 " zinc_gray_900
 
-let cterm_hot_pink = 199
+let cterm_hot_pink = 198
 let cterm_white = 231 " white
 
 highlight clear
@@ -186,8 +186,8 @@ exec "hi NERDTreeCWD ctermfg=".cterm_hot_pink
 " nvim-tree
 exec "hi NvimTreeExecFile guifg=".zinc_gray_500
 exec "hi NvimTreeExecFile ctermfg=".cterm_gray_700
-exec "hi NvimTreeFolderIcon guifg=".gray_200
-exec "hi NvimTreeIndentMarker guifg=".zinc_gray_500
+exec "hi NvimTreeFolderIcon guifg=".hot_pink
+exec "hi NvimTreeIndentMarker guifg=".gray_300
 exec "hi NvimTreeRootFolder guifg=".zinc_gray_500
 
 " nvim-treesitter
@@ -208,6 +208,11 @@ exec "hi TSKeywordFunction guifg=".gray_500
 exec "hi TSFunction guifg=".white
 exec "hi TSNone guifg=".gray_400
 "exec "hi TSType guifg=".gray_400
+
+" DevIcons (all the same color) -> TODO: Doesn't seem to work, needs testing
+for hl in getcompletion("DevIcon", "highlight")
+    execute "hi ".hl." guifg=".gray_500." ctermfg=".cterm_gray_500
+endfor
 
 " Clean up
 unlet gray_900 gray_800 gray_700 gray_600 gray_500 gray_400 gray_300 gray_200 hot_pink white zinc_gray_500 zinc_gray_200 zinc_gray_600
