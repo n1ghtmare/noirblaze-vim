@@ -1,6 +1,8 @@
 A dark minimal vim theme with a touch of hot pink (magenta?).
 
-![noirblaze-screenshot-1](https://user-images.githubusercontent.com/3255810/111699900-5e395700-8841-11eb-9c93-2a6d939d8dad.png)
+![2022-02-08_14-42](https://user-images.githubusercontent.com/3255810/152989950-4dfd75e3-09d6-4bb9-ba09-26b7ded0978f.png)
+
+
 
 ## Installation
 
@@ -25,4 +27,5 @@ let g:lightline = { 'colorscheme': 'noirblaze' }
 
 Here is some more screenshots:
 
-![2021-05-16_22-33](https://user-images.githubusercontent.com/3255810/118410169-ca480800-b696-11eb-90e5-5ad07c76da9a.png)
+![2022-02-08_14-43](https://user-images.githubusercontent.com/3255810/152989994-6a285733-6843-4b6e-b832-a8ca253c550b.png)
+![2022-02-08_14-45](https://user-images.githubusercontent.com/3255810/152990007-6588a276-d0c3-4d36-9485-394cc4c8d7b1.png)
