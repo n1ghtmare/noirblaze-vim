@@ -33,6 +33,7 @@ syntax reset
 let g:colors_name = "noirblaze"
 
 exec "hi Normal ctermfg=".cterm_gray_400." ctermbg=".cterm_gray_900
+exec "hi Normal guifg=".gray_400." guibg=".gray_900
 
 " Default
 exec "hi Comment guifg=".gray_700
