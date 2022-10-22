@@ -191,7 +191,7 @@ exec "hi NvimTreeFolderIcon guifg=".hot_pink
 exec "hi NvimTreeIndentMarker guifg=".gray_300
 exec "hi NvimTreeRootFolder guifg=".zinc_gray_500
 
-" nvim-treesitter
+" nvim-treesitter (backwards compatible for users of older nvim-treesitter versions)
 exec "hi TSInclude guifg=".gray_600
 exec "hi TSKeyword guifg=".gray_500
 exec "hi TSVariable guifg=".gray_300
@@ -209,6 +209,25 @@ exec "hi TSKeywordFunction guifg=".gray_500
 exec "hi TSFunction guifg=".white
 exec "hi TSNone guifg=".gray_400
 "exec "hi TSType guifg=".gray_400
+
+" nvim-treesitter new tags
+exec "hi @include guifg=".gray_600
+exec "hi @keyword guifg=".gray_500
+exec "hi @variable guifg=".gray_300
+exec "hi @punctuation.delimiter guifg=".gray_600
+exec "hi @punctuation.special guifg=".hot_pink
+"exec "hi @punctuation.bracket guifg=".gray_600
+exec "hi @type.builtin guifg=".gray_600
+exec "hi @tag guifg=".gray_600
+"exec "hi @tag.delimiter guifg=".gray_400
+exec "hi @constructor guifg=".gray_200
+exec "hi @property guifg=".gray_300
+exec "hi @method guifg=".gray_200
+exec "hi @keyword.return guifg=".white
+exec "hi @keyword.function guifg=".gray_500
+exec "hi @function guifg=".white
+exec "hi @none guifg=".gray_400
+"exec "hi @type guifg=".gray_400
 
 " DevIcons (all the same color) -> TODO: Doesn't seem to work, needs testing
 for hl in getcompletion("DevIcon", "highlight")
