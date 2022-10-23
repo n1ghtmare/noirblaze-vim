@@ -11,11 +11,24 @@ If you're using vim-plug you can add the following to your plugin call:
 Plug 'n1ghtmare/noirblaze-vim'
 ```
 
-Then in your config add:
+Or if you're using [packer.nvim](https://github.com/wbthomason/packer.nvim):
+
+```lua
+use "n1ghtmare/noirblaze-vim"
+```
+
+Then in your config add (for vim):
 
 ```vim
 syntax enable
 colorscheme noirblaze
+```
+
+Or, for neovim with `lua`:
+
+```lua
+vim.opt.background = "dark"
+vim.cmd("colorscheme noirblaze")
 ```
 
 You can also enable the lightline theme by including the following:
