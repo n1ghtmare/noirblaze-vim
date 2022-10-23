@@ -93,7 +93,6 @@ exec "hi gitcommitUntrackedFile guifg=".hot_pink
 exec "hi gitcommitUntrackedFile ctermfg=".cterm_hot_pink
 
 " Default
-
 exec "hi ColorColumn guibg=".gray_800
 exec "hi ColorColumn ctermbg=".cterm_zinc_gray_900
 exec "hi Conceal guifg=".gray_700
@@ -211,25 +210,27 @@ exec "hi TSFunction guifg=".white
 exec "hi TSNone guifg=".gray_400
 "exec "hi TSType guifg=".gray_400
 
-" nvim-treesitter new tags
-exec "hi @include guifg=".gray_600
-exec "hi @keyword guifg=".gray_500
-exec "hi @variable guifg=".gray_300
-exec "hi @punctuation.delimiter guifg=".gray_600
-exec "hi @punctuation.special guifg=".hot_pink
-"exec "hi @punctuation.bracket guifg=".gray_600
-exec "hi @type.builtin guifg=".gray_600
-exec "hi @tag guifg=".gray_600
-exec "hi @tag.attribute guifg=".gray_450
-"exec "hi @tag.delimiter guifg=".gray_400
-exec "hi @constructor guifg=".gray_200
-exec "hi @property guifg=".gray_300
-exec "hi @method guifg=".gray_200
-exec "hi @keyword.return guifg=".white
-exec "hi @keyword.function guifg=".gray_500
-exec "hi @function guifg=".white
-exec "hi @none guifg=".gray_400
-"exec "hi @type guifg=".gray_400
+" nvim-treesitter new tags (won't work with older version of neovim)
+if has('nvim-0.8')
+    exec "hi @include guifg=".gray_600
+    exec "hi @keyword guifg=".gray_500
+    exec "hi @variable guifg=".gray_300
+    exec "hi @punctuation.delimiter guifg=".gray_600
+    exec "hi @punctuation.special guifg=".hot_pink
+    "exec "hi @punctuation.bracket guifg=".gray_600
+    exec "hi @type.builtin guifg=".gray_600
+    exec "hi @tag guifg=".gray_600
+    exec "hi @tag.attribute guifg=".gray_450
+    "exec "hi @tag.delimiter guifg=".gray_400
+    exec "hi @constructor guifg=".gray_200
+    exec "hi @property guifg=".gray_300
+    exec "hi @method guifg=".gray_200
+    exec "hi @keyword.return guifg=".white
+    exec "hi @keyword.function guifg=".gray_500
+    exec "hi @function guifg=".white
+    exec "hi @none guifg=".gray_400
+    "exec "hi @type guifg=".gray_400
+endif
 
 " DevIcons (all the same color) -> TODO: Doesn't seem to work, needs testing
 for hl in getcompletion("DevIcon", "highlight")
@@ -237,5 +238,5 @@ for hl in getcompletion("DevIcon", "highlight")
 endfor
 
 " Clean up
-unlet gray_900 gray_800 gray_700 gray_600 gray_500 gray_400 gray_300 gray_200 hot_pink white zinc_gray_500 zinc_gray_200 zinc_gray_600
+unlet gray_900 gray_800 gray_700 gray_600 gray_500 gray_450 gray_400 gray_300 gray_200 hot_pink white zinc_gray_500 zinc_gray_200 zinc_gray_600
 unlet cterm_gray_900 cterm_zinc_gray_900 cterm_gray_800 cterm_gray_700 cterm_gray_600 cterm_gray_500 cterm_gray_400 cterm_white cterm_hot_pink
