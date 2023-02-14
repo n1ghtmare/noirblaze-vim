@@ -1,8 +1,6 @@
 ## Important Notice
 
-### This theme has evolved into [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy), which builds upon noirblaze-vim and takes it to the next level. Highly customizable with many presets. You can now change the "primary" colour and have your own spin on a monochrome color scheme. 
-
-### This repo will be considered legacy, and if you're using Neovim, I highly encourage you to use nvim-noirbuddy! It will be the theme I'm going to be focused on maintaining.
+#### If you're using neovim, you should be using [nvim-noirbuddy](https://github.com/jesseleite/nvim-noirbuddy), which builds upon noirblaze-vim and takes it to the next level. Highly customizable with many presets. You can now change the "primary" colour and have your own spin on a monochrome color scheme. 
 
 ---
 
